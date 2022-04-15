@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions } from "../store";
 import { withRouter } from "react-router-dom";
-import Flag from "../components/Flagr";
 
-class Flagr extends Component {
+import { actions } from "../store/store";
+
+import { component } from "../components/component";
+
+
+class Flag extends Component {
   render() {
+    const { Custom } = component;
     return (
       <div>
         <h1>Hello</h1>
-        <Flag
+        <Custom
           value="25000"
         />
       </div>
@@ -21,4 +25,4 @@ class Flagr extends Component {
 export default connect(
   "",
   actions
-)(withRouter(Flagr));
+)(withRouter(Flag));

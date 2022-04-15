@@ -1,0 +1,11 @@
+.box-style {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.box-body {
+    padding: 35px 10%;
+    font-size: 14px;
+    background-color: #f6f8fa;
+    border: 1px solid #d0d7de;
+}

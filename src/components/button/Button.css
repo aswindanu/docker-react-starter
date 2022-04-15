@@ -1,0 +1,8 @@
+.button-style {
+    margin: 16px;
+    color: #ffffff;
+    background-color: #2da44e;
+    border-color: rgb(28 32 37 / 15%);
+    box-shadow: var(--color-btn-primary-shadow),var(--color-btn-primary-inset-shadow);
+    width: 100%;
+}   

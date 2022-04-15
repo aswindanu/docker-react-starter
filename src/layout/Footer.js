@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions } from "../../store";
 import { withRouter } from "react-router-dom";
-// import logo from "../../logo.svg";
+import { actions } from "../store/store";
 
 class Footer extends Component {
   render() {

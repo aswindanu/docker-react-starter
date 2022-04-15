@@ -1,6 +1,8 @@
 import createStore from "unistore";
 import axios from "axios";
-import { Host, FlagrHost } from "./Host";
+
+import { Host, FlagrHost } from "../Host";
+
 
 const initialState = {
   is_login: false,
@@ -51,7 +53,7 @@ export const actions = store => ({
       });
   },
 
-  GetFlagr: async state => {
+  GetCustom: async state => {
     const request = {
       method: "GET",
       url: FlagrHost + "/flags/1",

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "unistore/react";
-import { actions } from "../store";
 import { withRouter } from "react-router-dom";
+import { actions } from "../../store/store";
 
-class Flagr extends Component {
+class Custom extends Component {
   constructor(props){
     super(props)
 
@@ -17,7 +17,7 @@ class Flagr extends Component {
   }
 
   componentDidMount() {
-    this.props.GetFlagr();
+    this.props.GetCustom();
   }
 
   onClick() {
@@ -27,16 +27,16 @@ class Flagr extends Component {
   render() {
     return (
       <div>
-        <h1>This is Flagr</h1>
+        <h1>This is Custom</h1>
         <h3>Props Example :</h3>
-        <p>{console.log(this.props.enabled, "FLAGR")}</p>
-        <p>{String(this.props.enabled)} => enabled</p>
-        <p>{String(this.props.is_login)} => is_login</p>
-        <p>{String(this.props.value)} => value</p>
-        <p>{String(this.state.local)} => local</p>
-        <p>{String(this.state.propstostate)} => propstostate</p>
-        <p>{String(process.env.REACT_APP_FLAGHOST)} => flaghost</p>
-        <p>{String(this.state.clicked)} => clicked</p>
+        <p>{console.log(this.props.enabled, "Custom")}</p>
+        <p>{String(this.props.enabled)} &gt; enabled</p>
+        <p>{String(this.props.is_login)} &gt; is_login</p>
+        <p>{String(this.props.value)} &gt; value</p>
+        <p>{String(this.state.local)} &gt; local</p>
+        <p>{String(this.state.propstostate)} &gt; propstostate</p>
+        <p>{String(process.env.REACT_APP_FLAGHOST)} &gt; flaghost</p>
+        <p>{String(this.state.clicked)} &gt; clicked</p>
         <button onClick={ this.onClick } onKeyDown={ this.onClick }>Click me</button>
       </div>
     );
@@ -46,4 +46,4 @@ class Flagr extends Component {
 export default connect(
   "is_login, enabled, actions",
   actions
-)(withRouter(Flagr));
+)(withRouter(Custom));

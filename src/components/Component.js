@@ -1,19 +1,13 @@
-import React, { Component } from "react";
-import { connect } from "unistore/react";
-import { actions } from "../store";
-import { withRouter } from "react-router-dom";
+import Custom from "./custom/Custom";
+import Sample from "./sample/Sample";
+import TextArea from "./textarea/TextArea";
+import Button from "./button/Button";
+import BoxArea from "./boxarea/BoxArea";
 
-class Components extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is Component</h1>
-      </div>
-    );
-  }
+export const component = {
+    Custom,
+    Sample,
+    TextArea,
+    Button,
+    BoxArea,
 }
-
-export default connect(
-  "",
-  actions
-)(withRouter(Components));

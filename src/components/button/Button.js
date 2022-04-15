@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "unistore/react";
 import { withRouter } from "react-router-dom";
-import { actions } from "../store/store";
+import { actions } from "../../store/store";
+import "./Button.css";
 
-class FourZeroFour extends Component {
+class Button extends Component {
   render() {
     return (
       <div>
-        <h1>This Is 404 Page</h1>
+        <input type="submit" className="button-style"></input>
       </div>
     );
   }
@@ -16,4 +17,4 @@ class FourZeroFour extends Component {
 export default connect(
   "",
   actions
-)(withRouter(FourZeroFour));
+)(withRouter(Button));

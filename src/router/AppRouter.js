@@ -1,22 +1,23 @@
 import React, { Component } from "react";
-import MainRoute from "./MainRoute.js";
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions } from "./store";
+import { actions } from "../store/store";
 
-import Header from "./pages/universal/Header";
-import Footer from "./pages/universal/Footer";
+import MainRoute from "./MainRoute.js";
 
-class Apps extends Component {
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
+
+class AppRouter extends Component {
   postSignout = () => {
     this.props.postLogout();
     this.props.history.push("/");
   };
   render() {
     return (
-      <div className="app">
+      <div>
         <Header postSignout={this.postSignout} />
-        <MainRoute />
+          <MainRoute />
         <Footer />
       </div>
     );
@@ -26,4 +27,4 @@ class Apps extends Component {
 export default connect(
   "",
   actions
-)(withRouter(Apps));
+)(withRouter(AppRouter));

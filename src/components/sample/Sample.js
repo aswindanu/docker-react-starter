@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions } from "../../store";
 import { withRouter } from "react-router-dom";
+import { actions } from "../../store/store";
 
-class Header extends Component {
+class Sample extends Component {
   render() {
     return (
       <div>
-        <header>
-          <h2>This Is Header</h2>
-        </header>
+        <h1>This is Component</h1>
       </div>
     );
   }
@@ -19,4 +16,4 @@ class Header extends Component {
 export default connect(
   "",
   actions
-)(withRouter(Header));
+)(withRouter(Sample));
