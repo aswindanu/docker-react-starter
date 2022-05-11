@@ -6,9 +6,10 @@ import "./Button.css";
 
 class Button extends Component {
   render() {
+    const { functionClick } = this.props;
     return (
       <div>
-        <input type="submit" className="button-style"></input>
+        <input onClick={e => functionClick()} type="submit" className="button-style"></input>
       </div>
     );
   }
